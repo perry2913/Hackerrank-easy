@@ -1,0 +1,20 @@
+# Hackerrank-easy
+
+if __name__ == '__main__':
+    n = int(input())
+    l = []
+    for _ in range(n):
+        com= input().split()
+        str= com[0]
+        args = com[1:]
+        if str != "print":
+            cmd= str+ "(" + ','.join(args) + ")"
+            #newcom= "l."+cmd
+            eval("l."+cmd)
+            #print(l)
+        else:
+            print(l)
+
+
+#eval(expression, global, local) - lets you evaluate an expression. //might have to import OS
+#spliting a string(INPUT) gives you a LIST.
