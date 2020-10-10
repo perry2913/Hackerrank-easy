@@ -1,0 +1,12 @@
+k = int(input())
+lroom = input().split()
+single, multiple= set(), set()
+for room in lroom :
+    if room not in single:
+        single.add(room)
+    else: 
+        multiple.add(room)
+z= single.difference(multiple)
+print(*z)
+
+##///sets are amazing coz they only allow unique entries. Note to self- learn set functions like difference, etc
