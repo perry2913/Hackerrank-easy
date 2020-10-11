@@ -1,0 +1,19 @@
+from itertools import _
+#_ can be permutations, combinations, product, groupby, etc.
+
+itertools
+- product
+print(list(product(a,b)) >> cartesian product of a and b
+- permutations
+from itertools import permutations
+s,r= input().split()
+print(*[''.join(i) for i in permutations(sorted(s),int(r))], sep= '\n' )
+
+- combinations
+- compress the string / groupby()
+from itertools import groupby
+print(*[(len(list(c)), int(k)) for k, c in groupby(input())])
+# [k for k, g in groupby('AAAABBBCCDAABBB')] --> A B C D A B
+# [list(g) for k, g in groupby('AAAABBBCCD')] --> AAAA BBB CC D
+groupby works on a string to give you 1) the key you specified, 2) a list of the suitable characters you asked for.
+you can use lambda functions to implement different keys too btw :)
