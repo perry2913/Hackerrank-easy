@@ -1,0 +1,13 @@
+# making a dictionary with names and phone numbers on being given strings
+t = int(input())
+nlist= [input().split() for _ in range(t)]
+pdict = {k:v for k,v in nlist}
+for i in range(t):
+    try:
+        query = input().strip()
+        if query in pdict:
+            print('%s=%s' % (query, pdict[query]))
+        else :
+            print("Not found")
+    except:
+        break
