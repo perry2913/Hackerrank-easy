@@ -1,0 +1,29 @@
+#without using counter
+x = int(input())
+#print(x)
+shoelist = list(map(int,input().split()))
+#print(shoelist)
+t = int(input())
+amt = 0
+for _ in range(t):
+    size, price = input().split()
+    if int(size) in shoelist :
+        amt += int(price)
+        shoelist.remove(int(size))
+    else :
+        continue
+print(amt)
+
+#using counters
+from collections import Counter
+
+int(input())
+sizes = list(map(int,input().split()))
+money = 0
+stock = Counter(sizes)
+for i in range(int(input())):
+    x,y = list(map(int,input().split()))
+    if stock[x]:
+        money+=y
+        stock[x]-=1
+print(money)
