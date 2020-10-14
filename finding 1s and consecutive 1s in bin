@@ -1,0 +1,15 @@
+#!/bin/python3
+import math
+import os
+import random
+import re
+import sys
+
+if __name__ == '__main__':
+    n = int(input())
+    #to print no. of 1s
+    print(len(''.join(str(bin(n)).split('0')))-1)
+    #consecutive 1s in bin of no.
+    binnum = bin(n)[2:]
+    #print(binnum.replace("0"," ").split())
+    print(len(max(binnum.replace('0', ' ').split(), key=len)))
