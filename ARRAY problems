@@ -1,0 +1,34 @@
+#accepting array input of n*n matrix
+    arr = []
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+    print(arr)
+ 
+#traversing - use multiple for loops 
+#hourglass problem
+
+if __name__ == '__main__':
+    arr =[]
+    for _ in range(6):
+        arr.append(list(map(int, input().rstrip().split())))
+    #print(arr)
+    maxi =0
+    sumlist = []
+    for i in range(1,5):
+        for j in range(1,5):
+            total = sum(arr[i-1][j-1:j+2])+arr[i][j]+sum(arr[i+1][j-1:j+2])
+            sumlist.append(total)
+    print(max(sumlist))
+            
+            
+
+
+
+
+
+
+
+
+
+
+
